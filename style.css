@@ -1,0 +1,294 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Madimi One", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.first_step {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(226, 226, 226);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.flower {
+  position: relative;
+  width: 500px;
+  height: 450px;
+}
+
+.flower_center {
+  background: radial-gradient(circle, #643b05, #8f4310f5, #000);
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 0 8px #682600);
+  border-radius: 50%;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  z-index: 40;
+}
+
+.flower_petal {
+  background: linear-gradient(0deg, #b88700, #ffd000);
+  filter: drop-shadow(0 0 6px #b88700);
+  width: 60px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.flower_petal:nth-child(2) {
+  top: 22%;
+  left: 44%;
+  z-index: 30;
+}
+
+.flower_petal:nth-child(3) {
+  top: 35%;
+  left: 55%;
+  transform: rotate(90deg);
+  z-index: 30;
+}
+
+.flower_petal:nth-child(4) {
+  top: 35%;
+  left: 34%;
+  transform: rotate(-90deg);
+  z-index: 30;
+}
+
+.flower_petal:nth-child(5) {
+  top: 47%;
+  left: 44%;
+  transform: rotate(180deg);
+  z-index: 30;
+}
+
+.flower_petal:nth-child(6) {
+  top: 43%;
+  left: 53%;
+  transform: rotate(140deg);
+}
+
+.flower_petal:nth-child(7) {
+  top: 43%;
+  left: 36%;
+  transform: rotate(-140deg);
+}
+
+.flower_petal:nth-child(8) {
+  top: 26%;
+  left: 53%;
+  transform: rotate(40deg);
+}
+
+.flower_petal:nth-child(9) {
+  top: 26%;
+  left: 36%;
+  transform: rotate(-40deg);
+}
+
+.click_me {
+  font-size: 2em;
+  color: #caa500;
+  animation-name: text;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.flower_animated {
+  animation-name: flower;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.second_step {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.animated_back {
+  animation-name: back;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.text {
+  color: #ffd000;
+  text-align: center;
+  font-size: 1.7em;
+  filter: drop-shadow(0px 0px 3px #ffd000);
+}
+
+.text_animated {
+  animation-name: text2;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.second_flower {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.ramo {
+  background: linear-gradient(0deg, #000, #00bb92, #00bb64);
+  width: 5px;
+  height: 150px;
+  position: absolute;
+}
+
+.hoja {
+  width: 15px;
+  height: 25px;
+  border-radius: 50%;
+  background: linear-gradient(0deg, #000, #00bb92, #00bb64);
+  position: absolute;
+}
+
+.petal {
+  background: linear-gradient(0deg, #b88700, #ffd000);
+  filter: drop-shadow(0 0 6px #cf9801);
+  width: 20px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.ramo:nth-child(1) {
+  transform: rotate(13deg);
+  top: 50%;
+  left: 60%;
+}
+.ramo:nth-child(2) {
+  transform: rotate(-13deg);
+  left: 55%;
+  top: 50%;
+}
+
+.petal:nth-child(3) {
+  top: 47%;
+  left: 47%;
+}
+.petal:nth-child(4) {
+  top: 49%;
+  left: 50%;
+  transform: rotate(50deg);
+}
+
+.petal:nth-child(5) {
+  top: 50%;
+  left: 45%;
+  transform: rotate(-50deg);
+}
+
+.petal:nth-child(6) {
+  top: 47%;
+  left: 63%;
+}
+
+.petal:nth-child(7) {
+  top: 48%;
+  left: 66%;
+  transform: rotate(50deg);
+}
+
+.petal:nth-child(8) {
+  top: 48%;
+  left: 60%;
+  transform: rotate(-50deg);
+}
+
+.hoja:nth-child(9) {
+  top: 70%;
+  left: 63%;
+  transform: rotate(48deg);
+}
+
+.hoja:nth-child(10) {
+  top: 65%;
+  left: 46%;
+  transform: rotate(-48deg);
+}
+
+#reset {
+  background-color: #c09d01;
+  color: #000;
+  border-radius: 14px;
+  width: 200px;
+  height: 30px;
+  border: none;
+  margin-top: 7px;
+  font-family: "Madimi One", sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+#reset:hover {
+  background-color: #ffd000;
+}
+
+@keyframes text2 {
+  from {
+    visibility: 0;
+  }
+  to {
+    visibility: 100;
+  }
+}
+
+@keyframes back {
+  from {
+    background-color: #ffffff;
+  }
+  to {
+    background-color: #000;
+  }
+}
+
+@keyframes flower {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes text {
+  0% {
+    font-size: 1.9em;
+  }
+  50% {
+    font-size: 2em;
+  }
+  100% {
+    font-size: 1.9 em;
+  }
+}
