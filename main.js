@@ -17,5 +17,5 @@ flower.addEventListener("click", () => {
 
 
 button.addEventListener("click",()=>{
-  window.location = "/";
+  window.location = "/Proyecto";
 });
